@@ -21,6 +21,6 @@ spouse(Spouse,Target) :- married(Target,Spouse).
 child(Child,Parent) :- parent(Parent,Child).
 son(Son,Parent) :- child(Son,Parent), male(Son).
 daughter(Daughter,Parent) :- child(Daughter,Parent), female(Daughter).
-sibling(Sibling,Target) :- mother(Mother,Sibling) =:= mother(Mother,Target), father(Father,Sibling) =:= father(Father,Target).
+sibling(Sibling,Target) :- parent(Parent,Sibling) =:= parent(Parent,Target).
 brother(Brother,Target) :- sibling(Brother,Target), male(Brother).
 sister(Sister,Target) :- sibling(Sister,Target), male(Sister).
